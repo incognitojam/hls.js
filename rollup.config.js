@@ -25,6 +25,7 @@ module.exports = ({ configType = [] }) => {
     configEntries = enabledEntries;
   }
 
+  configEntries = configEntries.filter(([name]) => name === 'lightEsm');
   console.log(
     `Building configs: ${configEntries.map(([name]) => name).join(', ')}.\n`,
   );
